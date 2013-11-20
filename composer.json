@@ -4,7 +4,7 @@
     "description": "Namecheap API",
     "keywords": ["api","namecheap"],
     "homepage": "https://github.com/speedster-kiev/namecheap-php-sdk",
-    "license": "Apache2.0",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Maksym Karazieiev",
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Namecheap\\": "."
+            "Namecheap\\": "src"
         }
     }
 }
