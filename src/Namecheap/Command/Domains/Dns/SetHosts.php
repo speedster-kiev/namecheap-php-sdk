@@ -12,6 +12,11 @@ namespace Namecheap\Command\Domains\Dns
 		protected $_hosts = array();
 		protected $_hostIdMap = array();
 
+        /**
+         * @var bool
+         */
+        public $success = false;
+
 		public function command()
 		{
 			return 'namecheap.domains.dns.setHosts';
@@ -161,5 +166,13 @@ namespace Namecheap\Command\Domains\Dns
 			}
 			return $this->getHost($index);
 		}
+
+        public function _postDispatch() {
+            $attributes = $this->_response->DomainDNSSetHostsResult->attributes();
+            var_dump($attributes->attributes());
+            if ($attributes['IsSuccess'] === 'true') {
+                $this->success = true;
+            }
+        }
 	}
 }

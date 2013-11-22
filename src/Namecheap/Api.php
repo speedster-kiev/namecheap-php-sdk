@@ -25,6 +25,7 @@ namespace Namecheap
 	include_once 'Command/Domains/Ns/GetInfo.php';
 	include_once 'Command/Domains/Ns/Update.php';
 	include_once 'Command/Users/GetBalances.php';
+	include_once 'Command/Users/Address/GetList.php';
 
 	class Api
 	{
@@ -47,6 +48,8 @@ namespace Namecheap
 			'domains.ns.getInfo'		=> 'Namecheap\Command\Domains\Ns\GetInfo',
 			'domains.ns.update'			=> 'Namecheap\Command\Domains\Ns\Update',
 			'users.getBalances'			=> 'Namecheap\Command\Users\GetBalances',
+			'users.address.getList'		=> 'Namecheap\Command\Users\Address\GetList',
+			'users.address.getInfo'		=> 'Namecheap\Command\Users\Address\GetInfo',
 		);
 
 		/**
