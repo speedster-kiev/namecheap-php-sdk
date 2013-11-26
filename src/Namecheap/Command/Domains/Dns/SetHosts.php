@@ -169,8 +169,7 @@ namespace Namecheap\Command\Domains\Dns
 
         public function _postDispatch() {
             $attributes = $this->_response->DomainDNSSetHostsResult->attributes();
-            var_dump($attributes->attributes());
-            if ($attributes['IsSuccess'] === 'true') {
+            if ('true' === (string)$attributes['IsSuccess']) {
                 $this->success = true;
             }
         }
