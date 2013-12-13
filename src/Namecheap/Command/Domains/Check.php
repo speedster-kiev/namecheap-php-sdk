@@ -36,7 +36,7 @@ namespace Namecheap\Command\Domains
 		}
 
 		/**
-		 * Get/set method for domain list, limited to 1024 characters
+		 * Get/set method for domain list
 		 * @param string|array $value
 		 * @return mixed
 		 */
@@ -47,7 +47,7 @@ namespace Namecheap\Command\Domains
 				// If array of domains is passed, convert to comma separated
 				if (is_array($value)) { $value = implode(',', $value); }
 
-				$this->setParam('DomainList', (string) substr($value, 0, 1024));
+				$this->setParam('DomainList', (string) $value);
 				return $this;
 			}
 			return $this->getParam('DomainList');
