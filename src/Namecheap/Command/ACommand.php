@@ -180,8 +180,11 @@ namespace Namecheap\Command
 			// Perform any pre-connect code if the extending command class has defined it
 			$this->_preConnect();
 
-			$ch = curl_init($this->_url);
+			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_URL, $this->_config->url);
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $this->_params);
 			$this->_result = curl_exec($ch);
 			curl_close($ch);
 

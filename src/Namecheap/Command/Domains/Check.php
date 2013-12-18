@@ -27,7 +27,7 @@ namespace Namecheap\Command\Domains
 		 * Process domains array
 		 */
 		protected function _postDispatch()
-		{
+        {
 			$this->domains = array();
 			foreach ($this->_response->DomainCheckResult as $entry)
 			{
@@ -36,7 +36,7 @@ namespace Namecheap\Command\Domains
 		}
 
 		/**
-		 * Get/set method for domain list
+		 * Get/set method for domain list, limited to 120 domains
 		 * @param string|array $value
 		 * @return mixed
 		 */
@@ -44,8 +44,12 @@ namespace Namecheap\Command\Domains
 		{
 			if (null !== $value)
 			{
-				// If array of domains is passed, convert to comma separated
-				if (is_array($value)) { $value = implode(',', $value); }
+				if (is_string($value)) {
+                    $value = explode(',', $value);
+                }
+
+                $value = array_slice($value, 0, 120); // See https://community.namecheap.com/forums/viewtopic.php?f=17&t=7568
+                $value = implode(',', $value);
 
 				$this->setParam('DomainList', (string) $value);
 				return $this;
