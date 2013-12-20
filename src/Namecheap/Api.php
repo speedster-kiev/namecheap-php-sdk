@@ -15,6 +15,7 @@ namespace Namecheap
 	include_once 'Command/Domains/GetContacts.php';
 	include_once 'Command/Domains/Check.php';
 	include_once 'Command/Domains/Create.php';
+	include_once 'Command/Domains/GetTldList.php';
 	include_once 'Command/Domains/Dns/SetDefault.php';
 	include_once 'Command/Domains/Dns/SetCustom.php';
 	include_once 'Command/Domains/Dns/GetList.php';
@@ -38,6 +39,7 @@ namespace Namecheap
 			'domains.getContacts'		=> 'Namecheap\Command\Domains\GetContacts',
 			'domains.create'			=> 'Namecheap\Command\Domains\Create',
 			'domains.check'				=> 'Namecheap\Command\Domains\Check',
+			'domains.getTldList'		=> 'Namecheap\Command\Domains\GetTldList',
 			'domains.dns.setDefault'	=> 'Namecheap\Command\Domains\Dns\SetDefault',
 			'domains.dns.setCustom'		=> 'Namecheap\Command\Domains\Dns\SetCustom',
 			'domains.dns.getList'		=> 'Namecheap\Command\Domains\Dns\GetList',
