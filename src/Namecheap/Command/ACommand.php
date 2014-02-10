@@ -2,7 +2,9 @@
 
 namespace Namecheap\Command
 {
-	abstract class ACommand implements ICommand
+    use Namecheap\Command\Domains\Ns\GetInfo\Exception;
+
+    abstract class ACommand implements ICommand
 	{
 		/**
 		 * @var Namecheap\Config
@@ -205,7 +207,8 @@ namespace Namecheap\Command
 
 			if ($this->_status == 'error')
 			{
-				$this->errorMessage = (string) $this->_xml->Errors->Error;
+                $this->errorMessage = (string) $this->_xml->Errors->Error;
+                throw new Exception($this->errorMessage);
 				return false;
 			} else if ($this->_status == 'ok') {
 				$this->_response = $this->_xml->CommandResponse;
