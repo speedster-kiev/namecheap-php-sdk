@@ -196,6 +196,7 @@ namespace Namecheap\Command
 			if (false === $this->_result)
 			{
 				$this->errorMessage = 'Communication error with Namecheap.';
+                throw new Exception((string) $this->_xml->Errors->Error);
 				return false;
 			}
 
@@ -208,7 +209,7 @@ namespace Namecheap\Command
 			if ($this->_status == 'error')
 			{
                 $this->errorMessage = (string) $this->_xml->Errors->Error;
-                throw new Exception($this->errorMessage);
+                throw new Exception((string) $this->_xml->Errors->Error);
 				return false;
 			} else if ($this->_status == 'ok') {
 				$this->_response = $this->_xml->CommandResponse;
