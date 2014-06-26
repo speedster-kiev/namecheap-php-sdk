@@ -47,7 +47,7 @@ namespace Namecheap\Command\Domains
                 $this->setParam('DomainName', (string) substr($value, 0, 70));
                 return $this;
             }
-            $this->getParam('DomainName');
+            return $this->getParam('DomainName');
         }
     }
 }
