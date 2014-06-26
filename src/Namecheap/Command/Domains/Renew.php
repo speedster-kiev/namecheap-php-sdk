@@ -36,8 +36,8 @@ namespace Namecheap\Command\Domains
         }
 
         /**
-         * Get/set method for domain list, limited to 1024 characters
-         * @param string|array $value
+         * Get/set method for domain list, limited to 70 characters
+         * @param string $value
          * @return mixed
          */
         public function domainName($value = null)
