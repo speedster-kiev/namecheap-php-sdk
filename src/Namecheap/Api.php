@@ -16,6 +16,7 @@ namespace Namecheap
 	include_once 'Command/Domains/Check.php';
 	include_once 'Command/Domains/Create.php';
 	include_once 'Command/Domains/GetTldList.php';
+	include_once 'Command/Domains/Renew.php';
 	include_once 'Command/Domains/Dns/SetDefault.php';
 	include_once 'Command/Domains/Dns/SetCustom.php';
 	include_once 'Command/Domains/Dns/GetList.php';
@@ -26,6 +27,7 @@ namespace Namecheap
 	include_once 'Command/Domains/Ns/GetInfo.php';
 	include_once 'Command/Domains/Ns/Update.php';
 	include_once 'Command/Users/GetBalances.php';
+	include_once 'Command/Users/GetPricing.php';
 	include_once 'Command/Users/Address/GetList.php';
 
 	class Api
@@ -39,6 +41,7 @@ namespace Namecheap
 			'domains.getContacts'		=> 'Namecheap\Command\Domains\GetContacts',
 			'domains.create'			=> 'Namecheap\Command\Domains\Create',
 			'domains.check'				=> 'Namecheap\Command\Domains\Check',
+			'domains.renew'				=> 'Namecheap\Command\Domains\Renew',
 			'domains.getTldList'		=> 'Namecheap\Command\Domains\GetTldList',
 			'domains.dns.setDefault'	=> 'Namecheap\Command\Domains\Dns\SetDefault',
 			'domains.dns.setCustom'		=> 'Namecheap\Command\Domains\Dns\SetCustom',
@@ -50,6 +53,7 @@ namespace Namecheap
 			'domains.ns.getInfo'		=> 'Namecheap\Command\Domains\Ns\GetInfo',
 			'domains.ns.update'			=> 'Namecheap\Command\Domains\Ns\Update',
 			'users.getBalances'			=> 'Namecheap\Command\Users\GetBalances',
+			'users.getPricing'			=> 'Namecheap\Command\Users\GetPricing',
 			'users.address.getList'		=> 'Namecheap\Command\Users\Address\GetList',
 			'users.address.getInfo'		=> 'Namecheap\Command\Users\Address\GetInfo',
 		);
