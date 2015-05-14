@@ -2,9 +2,9 @@
 
 namespace Namecheap\Command
 {
-    use Namecheap\Command\Domains\Ns\GetInfo\Exception;
+	use Namecheap\Command\Domains\Ns\GetInfo\Exception;
 
-    abstract class ACommand implements ICommand
+	abstract class ACommand implements ICommand
 	{
 		/**
 		 * @var Namecheap\Config
@@ -166,6 +166,7 @@ namespace Namecheap\Command
 		/**
 		 * Execute a call to the Namecheap API
 		 * @return bool success or failure
+		 * @throws Exception
 		 */
 		public function dispatch()
 		{
