@@ -6,4 +6,4 @@ php:
   - 7
 
 script:
-  - phpunit -c tests/phpunit.xml.dist --colors=always || exit 1
+  - phpunit -c tests/phpunit.xml.dist || exit 1
