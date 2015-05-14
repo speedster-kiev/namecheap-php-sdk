@@ -6,4 +6,4 @@ php:
   - 7
 
 script:
-  - php ./vendor/bin/phpunit -c tests/phpunit.xml.dist --colors=always {}; || exit 1;
+  - php ./vendor/bin/phpunit -c tests/phpunit.xml.dist --colors=always || exit 1
