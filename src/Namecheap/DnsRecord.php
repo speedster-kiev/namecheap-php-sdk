@@ -146,7 +146,7 @@ namespace Namecheap
 		 */
 		public function setHost($value)
 		{
-			$this->_data['host'] = (string) substr($value, 0, 70);
+			$this->_data['host'] = (string) substr($value, 0, 200);
 			return $this;
 		}
 
@@ -185,7 +185,7 @@ namespace Namecheap
 		 */
 		public function setData($value)
 		{
-			$this->_data['data'] = (string) substr($value, 0, 70);
+			$this->_data['data'] = (string) substr($value, 0, 200);
 			return $this;
 		}
 
