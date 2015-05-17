@@ -61,6 +61,8 @@ namespace Namecheap\Command\Domains
 		 * Check if the domain is available from the returned api result. Will return false if the domain is not set
 		 * @param string $domain
 		 * @return bool
+		 * @throws
+		 * @throws Check\Exception
 		 */
 		public function isAvailable($domain)
 		{
