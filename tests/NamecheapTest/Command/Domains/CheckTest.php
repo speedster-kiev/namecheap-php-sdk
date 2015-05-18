@@ -4,8 +4,6 @@
  */
 namespace NamecheapTest\Command\Domains {
 
-    include_once 'src/Namecheap/Api.php';
-
     use Namecheap\Command\Domains\Check;
 
     class CheckTest extends \PHPUnit_Framework_TestCase {

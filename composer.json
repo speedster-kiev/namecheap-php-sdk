@@ -19,8 +19,8 @@
       "satooshi/php-coveralls": "dev-master"
     },
     "autoload": {
-        "psr-0": {
-            "Namecheap\\": "src"
+        "psr-4":{
+            "Namecheap\\" : "src/Namecheap/"
         }
     }
 }

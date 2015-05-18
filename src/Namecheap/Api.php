@@ -7,28 +7,7 @@ namespace Namecheap\Api
 
 namespace Namecheap
 {
-	include_once 'Config.php';
-	include_once 'DnsRecord.php';
-	include_once 'Command/ICommand.php';
-	include_once 'Command/ACommand.php';
-	include_once 'Command/Domains/GetList.php';
-	include_once 'Command/Domains/GetContacts.php';
-	include_once 'Command/Domains/Check.php';
-	include_once 'Command/Domains/Create.php';
-	include_once 'Command/Domains/GetTldList.php';
-	include_once 'Command/Domains/Renew.php';
-	include_once 'Command/Domains/Dns/SetDefault.php';
-	include_once 'Command/Domains/Dns/SetCustom.php';
-	include_once 'Command/Domains/Dns/GetList.php';
-	include_once 'Command/Domains/Dns/GetHosts.php';
-	include_once 'Command/Domains/Dns/SetHosts.php';
-	include_once 'Command/Domains/Ns/Create.php';
-	include_once 'Command/Domains/Ns/Delete.php';
-	include_once 'Command/Domains/Ns/GetInfo.php';
-	include_once 'Command/Domains/Ns/Update.php';
-	include_once 'Command/Users/GetBalances.php';
-	include_once 'Command/Users/GetPricing.php';
-	include_once 'Command/Users/Address/GetList.php';
+    include_once dirname(__FILE__) . '/../../vendor/autoload.php';
 
 	class Api
 	{

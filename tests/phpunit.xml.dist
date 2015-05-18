@@ -1,4 +1,4 @@
-<phpunit colors="true">
+<phpunit colors="true" bootstrap="bootstrap.php">
     <testsuites>
         <testsuite name="Zend Framework Test Suite">
             <directory>./NamecheapTest</directory>
