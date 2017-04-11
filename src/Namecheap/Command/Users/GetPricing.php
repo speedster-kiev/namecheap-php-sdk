@@ -18,10 +18,13 @@ namespace Namecheap\Command\Users
 
 		public function params()
 		{
+
 			return array(
                 'ProductType'	=> 'DOMAIN',
-                'ProductCategory'	=> null,
-						);
+	            'ProductCategory'	=> 'DOMAINS',
+				'ActionName' => 'REGISTER',
+				'ProductName' => 'COM'
+			);
 		}
 
 		/**
@@ -29,10 +32,16 @@ namespace Namecheap\Command\Users
 		 */
 		protected function _postDispatch()
 		{
-			foreach ($this->_response->UserGetPricingResult->attributes() as $key => $value)
-			{
-				$this->data[$key] = (string) $value;
+			
+			foreach ($this->_response->UserGetPricingResult->ProductType->ProductCategory->Product->Price as $prices){
+				$data = array();
+				foreach ($prices->attributes() as $key => $value) {
+					$data[$key] = (string) $value;
+				}
+				$this->data[] = $data;
+				
 			}
+			
 		}
 
 		/**
