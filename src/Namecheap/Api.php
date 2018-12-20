@@ -13,6 +13,7 @@ namespace Namecheap
 	include_once 'Command/ACommand.php';
 	include_once 'Command/Domains/GetList.php';
 	include_once 'Command/Domains/GetContacts.php';
+    include_once 'Command/Domains/GetInfo.php';
 	include_once 'Command/Domains/Check.php';
 	include_once 'Command/Domains/Create.php';
 	include_once 'Command/Domains/GetTldList.php';
@@ -39,6 +40,7 @@ namespace Namecheap
 		protected static $_commands = array(
 			'domains.getList'			=> 'Namecheap\Command\Domains\GetList',
 			'domains.getContacts'		=> 'Namecheap\Command\Domains\GetContacts',
+			'domains.getInfo'           => 'Namecheap\Command\Domains\GetInfo',
 			'domains.create'			=> 'Namecheap\Command\Domains\Create',
 			'domains.check'				=> 'Namecheap\Command\Domains\Check',
 			'domains.renew'				=> 'Namecheap\Command\Domains\Renew',
