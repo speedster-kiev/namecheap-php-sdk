@@ -15,10 +15,10 @@ try
 		->sandbox(true);
 
 	$command = Namecheap\Api::factory($config, 'domains.renew');
-	$command->setParams(array(
+	$command->setParams([
 		'DomainName' => 'example1.com',
 		'Years' => 1
-	))->dispatch();
+    ])->dispatch();
 } catch (\Exception $e) {
 	die($e->getMessage());
 }
@@ -26,7 +26,7 @@ try
 if ($command->status() == 'error') { die($command->errorMessage); }
 d($command);
 
-function d($value = array())
+function d($value = [])
 {
 	echo '<pre>' . "\n";
 	print_r($value);

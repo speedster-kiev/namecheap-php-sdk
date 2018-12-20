@@ -26,7 +26,7 @@ try
 if ($command->status() == 'error') { die($command->errorMessage); }
 d($command);
 
-function d($value = array())
+function d($value = [])
 {
 	echo '<pre>' . "\n";
 	print_r($value);

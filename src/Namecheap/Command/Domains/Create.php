@@ -1,15 +1,17 @@
 <?php
 
-namespace Namecheap\Command\Domains\Create
-{
-    class Exception extends \Exception {}
+namespace Namecheap\Command\Domains\Create {
+
+    class Exception extends \Exception
+    {
+    }
 }
 
-namespace Namecheap\Command\Domains
-{
+namespace Namecheap\Command\Domains {
+
     class Create extends \Namecheap\Command\ACommand
     {
-        public $domain = array();
+        public $domain = [];
 
         public function command()
         {
@@ -18,10 +20,10 @@ namespace Namecheap\Command\Domains
 
         public function params()
         {
-            return array(
-                'DomainName'    => null,
-                'Years'            => 1,
-            );
+            return [
+                'DomainName' => null,
+                'Years'      => 1,
+            ];
         }
 
         /**
@@ -29,21 +31,21 @@ namespace Namecheap\Command\Domains
          */
         protected function _postDispatch()
         {
-            foreach ($this->_response->DomainCreateResult->attributes() as $key => $value)
-            {
+            foreach ($this->_response->DomainCreateResult->attributes() as $key => $value) {
                 $this->domain[$key] = (string) $value;
             }
         }
 
         /**
          * Get/set method for domain list, limited to 1024 characters
+         *
          * @param string|array $value
+         *
          * @return mixed
          */
         public function domainName($value = null)
         {
-            if (null !== $value)
-            {
+            if (null !== $value) {
                 $this->setParam('DomainName', (string) substr($value, 0, 70));
                 return $this;
             }

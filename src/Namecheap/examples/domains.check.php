@@ -15,7 +15,7 @@ try
 		->sandbox(true);
 
 	$command = Namecheap\Api::factory($config, 'domains.check');
-	$command->domainList(array('example1.com', 'example2.me', 'acdealjfe.com'))->dispatch();
+	$command->domainList(['example1.com', 'example2.me', 'acdealjfe.com'])->dispatch();
 } catch (\Exception $e) {
 	die($e->getMessage());
 }
@@ -36,7 +36,7 @@ foreach ($command->domains as $domain => $available):
 	echo "<br/>\n";
 endforeach;
 
-function d($value = array())
+function d($value = [])
 {
 	echo '<pre>' . "\n";
 	print_r($value);
