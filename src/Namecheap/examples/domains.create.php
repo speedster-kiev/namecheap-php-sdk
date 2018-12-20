@@ -15,11 +15,11 @@ try
 		->sandbox(true);
 
 	$command = Namecheap\Api::factory($config, 'domains.create');
-	$command->setParams(array(
+	$command->setParams([
 		'DomainName' => 'example1.com',
 		'RegistrantFirstName'	=> 'John',
 		'RegistrantLastName'	=> 'Smith',
-	))->dispatch();
+    ])->dispatch();
 } catch (\Exception $e) {
 	die($e->getMessage());
 }
@@ -27,7 +27,7 @@ try
 if ($command->status() == 'error') { die($command->errorMessage); }
 d($command);
 
-function d($value = array())
+function d($value = [])
 {
 	echo '<pre>' . "\n";
 	print_r($value);

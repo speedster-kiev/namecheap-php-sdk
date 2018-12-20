@@ -1,21 +1,23 @@
 <?php
 
-namespace Namecheap\Command\Domains\GetInfo
-{
-    class Exception extends \Exception{}
+namespace Namecheap\Command\Domains\GetInfo {
+
+    class Exception extends \Exception
+    {
+    }
 }
 
 namespace Namecheap\Command\Domains {
 
     class GetInfo extends \Namecheap\Command\ACommand
     {
-        public $attributes = array();
-        public $domainDetails = array();
-        public $lockDetails = array();
-        public $whoIsGuard = array();
-        public $premiumDnsSubscription = array();
-        public $dnsDetails = array();
-        public $modificationRights = array();
+        public $attributes = [];
+        public $domainDetails = [];
+        public $lockDetails = [];
+        public $whoIsGuard = [];
+        public $premiumDnsSubscription = [];
+        public $dnsDetails = [];
+        public $modificationRights = [];
 
         public function command()
         {
@@ -24,10 +26,10 @@ namespace Namecheap\Command\Domains {
 
         public function params()
         {
-            return array(
+            return [
                 'DomainName' => null,
                 'HostName'   => null,
-            );
+            ];
         }
 
         /**
@@ -35,26 +37,26 @@ namespace Namecheap\Command\Domains {
          */
         protected function _postDispatch()
         {
-            $this->attributes = array();
+            $this->attributes = [];
             foreach ($this->_response->DomainGetInfoResult->attributes() as $key => $value) {
                 $this->attributes[$key] = (string) $value;
             }
 
-            $this->domainDetails = array();
+            $this->domainDetails = [];
             foreach ($this->_response->DomainGetInfoResult->DomainDetails as $entry) {
                 foreach ($entry as $key => $value) {
                     $this->domainDetails[$key] = (string) $value;
                 }
             }
 
-            $this->lockDetails = array();
+            $this->lockDetails = [];
             foreach ($this->_response->DomainGetInfoResult->LockDetails as $entry) {
                 foreach ($entry as $key => $value) {
                     $this->lockDetails[$key] = (string) $value;
                 }
             }
 
-            $this->whoIsGuard = array();
+            $this->whoIsGuard = [];
             foreach ($this->_response->DomainGetInfoResult->Whoisguard->attributes() as $key => $value) {
                 $this->whoIsGuard[$key] = (string) $value;
             }
@@ -72,15 +74,15 @@ namespace Namecheap\Command\Domains {
                 }
             }
 
-            $this->premiumDnsSubscription = array();
+            $this->premiumDnsSubscription = [];
             foreach ($this->_response->DomainGetInfoResult->PremiumDnsSubscription as $entry) {
                 foreach ($entry as $key => $value) {
                     $this->premiumDnsSubscription[$key] = (string) $value;
                 }
             }
 
-            $this->dnsDetails = array();
-            $this->dnsDetails['Nameserver'] = array();
+            $this->dnsDetails = [];
+            $this->dnsDetails['Nameserver'] = [];
             foreach ($this->_response->DomainGetInfoResult->DnsDetails->attributes() as $key => $value) {
                 $this->dnsDetails[$key] = (string) $value;
             }
@@ -96,7 +98,7 @@ namespace Namecheap\Command\Domains {
                 }
             }
 
-            $this->modificationRights = array();
+            $this->modificationRights = [];
             foreach ($this->_response->DomainGetInfoResult->Modificationrights->attributes() as $key => $value) {
                 $this->modificationRights[$key] = (string) $value;
             }

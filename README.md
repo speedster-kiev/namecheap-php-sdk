@@ -1,4 +1,4 @@
 namecheap-php-sdk
 =================
 
-Namecheap API provided by brandonlamb@gmail.com
+Namecheap API. Forked from https://github.com/speedster-kiev/namecheap-php-sdk

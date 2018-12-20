@@ -15,17 +15,17 @@ try
 		->sandbox(true);
 
 	$command = Namecheap\Api::factory($config, 'users.getPricing');
-	$command->setParams(array(
+	$command->setParams([
 		'ProductType'	=> 'DOMAIN',
 		'ProductCategory'	=> 'REGISTER'
-	))->dispatch();
+    ])->dispatch();
 } catch (\Exception $e) {
 	die($e->getMessage());
 }
 
 d($command);
 
-function d($value = array())
+function d($value = [])
 {
 	echo '<pre>' . "\n";
 	print_r($value);
