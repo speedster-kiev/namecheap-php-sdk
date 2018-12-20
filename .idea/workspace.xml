@@ -1,52 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac836ae2-2e07-45db-bd85-696a8cf4c44f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Api.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/ACommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/ACommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Check.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Check.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Create.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Dns/GetHosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Dns/GetHosts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Dns/GetList.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Dns/GetList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Dns/SetCustom.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Dns/SetCustom.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Dns/SetDefault.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Dns/SetDefault.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Dns/SetHosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Dns/SetHosts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Domains/GetContacts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Domains/GetContacts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Domains/GetInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Domains/GetInfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Domains/GetList.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Domains/GetList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Domains/GetTldList.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Domains/GetTldList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Ns/Create.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Ns/Create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Ns/Delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Ns/Delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Ns/GetInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Ns/GetInfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Ns/Update.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Ns/Update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Renew.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Domains/Renew.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/ICommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/ICommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Users/Address/GetInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Users/Address/GetInfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Users/Address/GetList.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Users/Address/GetList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Users/GetBalances.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Users/GetBalances.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Command/Users/GetPricing.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Command/Users/GetPricing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/Config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/DnsRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/DnsRecord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/domains.check.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/domains.check.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/domains.create.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/domains.create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/domains.dns.getHosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/domains.dns.getHosts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/domains.dns.getList.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/domains.dns.getList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/domains.dns.setCustom.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/domains.dns.setCustom.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/domains.dns.setDefault.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/domains.dns.setDefault.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/domains.dns.setHosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/domains.dns.setHosts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/domains.getContacts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/domains.getContacts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/domains.getInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/domains.getInfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/domains.getList.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/domains.getList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/domains.ns.create.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/domains.ns.create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/domains.ns.delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/domains.ns.delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/domains.ns.getInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/domains.ns.getInfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/domains.ns.update.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/domains.ns.update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/domains.renew.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/domains.renew.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/users.getBalances.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/users.getBalances.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Namecheap/examples/users.getPricing.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Namecheap/examples/users.getPricing.php" afterDir="false" />
-    </list>
+    <list default="true" id="ac836ae2-2e07-45db-bd85-696a8cf4c44f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,10 +25,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Namecheap/Command/ICommand.php">
+        <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+            <state relative-caret-position="377">
+              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -122,31 +77,6 @@
               <item name="namecheap-php-sdk" type="b2602c69:ProjectViewProjectNode" />
               <item name="namecheap-php-sdk" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="namecheap-php-sdk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="namecheap-php-sdk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="namecheap-php-sdk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="namecheap-php-sdk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Namecheap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="namecheap-php-sdk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="namecheap-php-sdk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Namecheap" type="462c0819:PsiDirectoryNode" />
-              <item name="Command" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="namecheap-php-sdk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="namecheap-php-sdk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Namecheap" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -182,19 +112,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545334761392</updated>
-      <workItem from="1545334762780" duration="861000" />
+      <workItem from="1545334762780" duration="996000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="861000" />
+    <option name="totallyTimeSpent" value="996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="946" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15018316" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -231,13 +161,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Namecheap/DnsRecord.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -304,8 +227,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Namecheap/Command/ICommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        <state relative-caret-position="464">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
         </state>
       </provider>
     </entry>
