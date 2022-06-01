@@ -15,14 +15,14 @@ try
 		->sandbox(true);
 
 	$command = Namecheap\Api::factory($config, 'domains.dns.setCustom');
-	$command->domainName('example1.com')->nameservers(array('ns1.example1.com', 'ns2.example1.com'))->dispatch();
+	$command->domainName('example1.com')->nameservers(['ns1.example1.com', 'ns2.example1.com'])->dispatch();
 } catch (\Exception $e) {
 	die($e->getMessage());
 }
 
 d($command);
 
-function d($value = array())
+function d($value = [])
 {
 	echo '<pre>' . "\n";
 	print_r($value);

@@ -14,8 +14,8 @@ try
 		->clientIp('your-ip')
 		->sandbox(true);
 
-	$command = Namecheap\Api::factory($config, 'domains.getContacts');
-	$command->domainName('example1.com')->dispatch();
+	$command = Namecheap\Api::factory($config, 'domains.getInfo');
+	$command->dispatch();
 } catch (\Exception $e) {
 	die($e->getMessage());
 }

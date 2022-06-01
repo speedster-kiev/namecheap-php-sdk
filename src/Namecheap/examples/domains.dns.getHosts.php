@@ -28,7 +28,7 @@ $command->removeHost(1);
 
 d($command);
 
-function d($value = array())
+function d($value = [])
 {
 	echo '<pre>' . "\n";
 	print_r($value);

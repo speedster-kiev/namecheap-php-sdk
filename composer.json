@@ -1,20 +1,21 @@
 {
-    "name": "karazieiev/namecheap-php-sdk",
+    "name": "coldturkeygroup/namecheap-php-sdk",
     "type": "library",
     "description": "Namecheap API",
     "keywords": ["api","namecheap"],
-    "homepage": "https://github.com/speedster-kiev/namecheap-php-sdk",
+    "homepage": "https://github.com/coldturkeygroup/namecheap-php-sdk",
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "Maksym Karazieiev",
-            "email": "mkarazeev@gmail.com",
-            "homepage": "",
+            "name": "The Cold Turkey Group",
+            "email": "support@coldturkeygroup.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=8.0",
+        "ext-curl": "*",
+        "ext-simplexml": "*"
     },
     "autoload": {
         "psr-0": {
