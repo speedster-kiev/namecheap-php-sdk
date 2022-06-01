@@ -3,7 +3,6 @@
 namespace Namecheap;
 
 use Namecheap\Command;
-use Namecheap\Command\ACommand;
 use Namecheap\Exceptions\NamecheapException;
 
 class Api
@@ -41,7 +40,7 @@ class Api
      * @param $command
      *
      * @throws NamecheapException
-     * @return ACommand
+     * @return Command\ACommand
      */
     public static function factory($config, $command)
     {
