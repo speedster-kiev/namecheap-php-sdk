@@ -1,55 +1,51 @@
 <?php
 
-namespace Namecheap\Command\Domains\Renew {
+namespace Namecheap\Command\Domains;
 
-    class Exception extends \Exception
+use Namecheap\Command\ACommand;
+
+class Renew extends ACommand
+{
+    public $domain = [];
+
+    public function command()
     {
+        return 'namecheap.domains.renew';
     }
-}
 
-namespace Namecheap\Command\Domains {
-
-    class Renew extends \Namecheap\Command\ACommand
+    public function params()
     {
-        public $domain = [];
+        return [
+            'DomainName' => null,
+            'Years'      => 1,
+        ];
+    }
 
-        public function command()
-        {
-            return 'namecheap.domains.renew';
+    /**
+     * Process domains array
+     */
+    protected function _postDispatch()
+    {
+        foreach ($this->_response->DomainRenewResult->attributes() as $key => $value) {
+            $this->domain[$key] = (string) $value;
+        }
+    }
+
+    /**
+     * Get/set method for domain list, limited to 70 characters
+     *
+     * @param string $value
+     *
+     * @return mixed
+     */
+    public function domainName($value = null)
+    {
+        if (null !== $value) {
+            $this->setParam('DomainName', (string) substr($value, 0, 70));
+
+            return $this;
         }
 
-        public function params()
-        {
-            return [
-                'DomainName' => null,
-                'Years'      => 1,
-            ];
-        }
-
-        /**
-         * Process domains array
-         */
-        protected function _postDispatch()
-        {
-            foreach ($this->_response->DomainRenewResult->attributes() as $key => $value) {
-                $this->domain[$key] = (string) $value;
-            }
-        }
-
-        /**
-         * Get/set method for domain list, limited to 70 characters
-         *
-         * @param string $value
-         *
-         * @return mixed
-         */
-        public function domainName($value = null)
-        {
-            if (null !== $value) {
-                $this->setParam('DomainName', (string) substr($value, 0, 70));
-                return $this;
-            }
-            return $this->getParam('DomainName');
-        }
+        return $this->getParam('DomainName');
     }
 }

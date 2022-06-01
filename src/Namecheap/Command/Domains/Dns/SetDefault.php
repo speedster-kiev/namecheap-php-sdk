@@ -1,63 +1,59 @@
 <?php
 
-namespace Namecheap\Command\Domains\Dns\SetDefault {
+namespace Namecheap\Command\Domains\Dns;
 
-    class Exception extends \Exception
+use Namecheap\Command\ACommand;
+
+class SetDefault extends ACommand
+{
+    public $domains = [];
+
+    public function command()
     {
+        return 'namecheap.domains.dns.setDefault';
     }
-}
 
-namespace Namecheap\Command\Domains\Dns {
-
-    class SetDefault extends \Namecheap\Command\ACommand
+    public function params()
     {
-        public $domains = [];
+        return [
+            'TLD' => 'com',
+            'SLD' => null,
+        ];
+    }
 
-        public function command()
-        {
-            return 'namecheap.domains.dns.setDefault';
-        }
+    /**
+     * Process domains array
+     */
+    protected function _postDispatch()
+    {
+        $this->domains = [];
 
-        public function params()
-        {
-            return [
-                'TLD' => 'com',
-                'SLD' => null,
-            ];
-        }
-
-        /**
-         * Process domains array
-         */
-        protected function _postDispatch()
-        {
-            $this->domains = [];
-
-            foreach ($this->_response->DomainDNSSetDefaultResult as $entry) {
-                $domain = [];
-                foreach ($entry->attributes() as $key => $value) {
-                    $domain[$key] = (string) $value;
-                }
-                $this->domains[$domain['Domain']] = $domain;
+        foreach ($this->_response->DomainDNSSetDefaultResult as $entry) {
+            $domain = [];
+            foreach ($entry->attributes() as $key => $value) {
+                $domain[$key] = (string) $value;
             }
+            $this->domains[$domain['Domain']] = $domain;
+        }
+    }
+
+    /**
+     * Get/set method for domain name, which is comprised of sld + tld
+     *
+     * @param string $value
+     *
+     * @return mixed
+     */
+    public function domainName($value = null)
+    {
+        if (null !== $value) {
+            list($sld, $tld) = explode('.', $value);
+            $this->setParam('SLD', (string) substr($sld, 0, 70));
+            $this->setParam('TLD', (string) substr($tld, 0, 10));
+
+            return $this;
         }
 
-        /**
-         * Get/set method for domain name, which is comprised of sld + tld
-         *
-         * @param string $value
-         *
-         * @return mixed
-         */
-        public function domainName($value = null)
-        {
-            if (null !== $value) {
-                list($sld, $tld) = explode('.', $value);
-                $this->setParam('SLD', (string) substr($sld, 0, 70));
-                $this->setParam('TLD', (string) substr($tld, 0, 10));
-                return $this;
-            }
-            return $this->getParam('SLD') . '.' . $this->getParam('TLD');
-        }
+        return $this->getParam('SLD') . '.' . $this->getParam('TLD');
     }
 }

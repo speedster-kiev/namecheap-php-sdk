@@ -1,26 +1,27 @@
 <?php
 
-namespace Namecheap\Command {
+namespace Namecheap\Command;
 
-    interface ICommand
-    {
-        /**
-         * @param Namecheap\Config $config
-         */
-        public function config(\Namecheap\Config $config);
+use Namecheap\Config;
 
-        /**
-         * Should return the command string
-         *
-         * @return string
-         */
-        public function command();
+interface ICommand
+{
+    /**
+     * @param Config $config
+     */
+    public function config(Config $config);
 
-        /**
-         * Should return an array of parameters that the extending command is adding along with default values
-         *
-         * @return array
-         */
-        public function params();
-    }
+    /**
+     * Should return the command string
+     *
+     * @return string
+     */
+    public function command();
+
+    /**
+     * Should return an array of parameters that the extending command is adding along with default values
+     *
+     * @return array
+     */
+    public function params();
 }
