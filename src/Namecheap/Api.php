@@ -3,6 +3,7 @@
 namespace Namecheap;
 
 use Namecheap\Command;
+use Namecheap\Command\ACommand;
 use Namecheap\Exceptions\NamecheapException;
 
 class Api
